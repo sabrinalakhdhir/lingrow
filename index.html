@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="https://kit.fontawesome.com/df2cf5b43f.js" crossorigin="anonymous"></script>
+    <title> LINGROW </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="index.js"></script>
+</head>
+<body>
+
+<!-- Hero image/Cover Photo -->
+<div class="hero-image">
+
+    <div class="hero-text">
+        <h1>LinGrow</h1>
+        <p>Welcome to the one stop app for Teachers, Parents, Researches and
+            and even students who want to learn a new language!</p>
+    </div>
+
+    <!-- Navigation bar
+    <div class= "navbar">
+        <div class="topnav">
+            <a href="#Home">Home</a>
+            <a href="#Information">Information</a>
+            <a href="#Communication">Communication</a>
+            <a href="activities.html">Activities</a>
+        </div>
+    </div>
+    -->
+
+    <!-- Dropdown language select menu -->
+    <div>
+        <form id="language">
+            <label>Language</label>
+            <select id="language1">
+                <option lang="en" value="english" selected>English</option>
+                <option lang="fr" value="francais">Francais</option>
+                <option lang="de" value="german">German</option>
+                <option lang="it" value="italiano">Italiano</option>
+                <option lang="es" value="español">Espanol</option>
+            </select>
+        </form>
+    </div>
+
+</div>
+
+<!--<button>Login</button>
+
+ <img src="lab.jpg">
+
+-->
+
+<!-- Menu for body -->
+<div class="grid-container">
+    <div class="grid-item">
+        <p>
+        <a href="information.html">Information</a>
+        </p>
+        <button class = "textToSpeech" onclick="readInformation()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+    </div>
+    <div class="grid-item">
+        <p>
+        <a href="communication.html">Communication</a>
+        </p>
+        <button class = "textToSpeech" onclick="readCommunication()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+    </div>
+    <div class="grid-item">
+        <p>
+        <a href="activities.html">Activities</a>
+        </p>
+        <button class = "textToSpeech" onclick="readActivities()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+    </div>
+</div>
+
+
+<!-- Create footer with icons for social media -->
+<div class="footer">
+    <a href="https://twitter.com/UofA_Arts">
+        <i class="fab fa-twitter"></i>
+    </a>
+</div>
+
+</body>
+</html>

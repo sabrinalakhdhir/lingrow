@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="mystyle.css">
+    <title> LINGROW </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+<!-- Hero image/Cover Photo -->
+<div class="hero-image">
+    <div class="hero-text">
+        <h1>Communication</h1>
+        <p>[Description]</p>
+    </div>
+    <!-- Navigation bar -->
+    <div class= "navbar">
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="information.html">Information</a>
+            <a href="communication.html">Communication</a>
+            <a href="activities.html">Activities</a>
+        </div>
+    </div>
+</div>
+
+<!--
+<div class="loginForm">
+    <form>
+        <label>OPTIONS</label>
+        <select id="userType">
+            <option value="Parent" selected>Parent</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Researcher">Researcher</option>
+        </select>
+
+        <br>
+        <label>Username: </label>
+        <input type="text" id="username">
+
+        <br>
+        <label>Password: </label>
+        <input type="password" id="password"> <br>
+
+        <input type="button" value="Login" onclick="openPortal()">
+    </form>
+</div>
+
+<p id="user"></p>
+-->
+
+<div class="grid-container">
+    <div class="grid-item">
+        <p>
+            <a href="teacher.html">I'm a Teacher!</a>
+        </p>
+        <button class = "textToSpeech" onclick="readInformation()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+    </div>
+    <div class="grid-item">
+        <p>
+            <a href="parent.html">I'm a Parent!</a>
+        </p>
+        <button class = "textToSpeech" onclick="readCommunication()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+    </div>
+    <div class="grid-item">
+        <p>
+            <a href="researcher.html">I'm a Researcher!</a>
+        </p>
+        <button class = "textToSpeech" onclick="readActivities()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+    </div>
+</div>
+
+</body>
+</html>

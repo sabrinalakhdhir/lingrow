@@ -1,1 +1,2 @@
-# lingrow.github.io
+# Neuronexus
+Dual Language App
