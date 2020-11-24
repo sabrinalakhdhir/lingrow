@@ -1,0 +1,187 @@
+body {
+    background-color: lavenderblush
+}
+h1 {
+    text-align:center;
+    font-family: Ariel, sans-serif;
+    color: #718c80;
+    font-size: 500% }
+p {
+    color: #ffffff;
+    text-align: center;
+    font-family: Ariel, sans-serif;
+}
+
+form {
+
+    margin: 0 auto;
+    font-family: Ariel, sans-serif;
+}
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("lab.JPG");
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Navbar Container*/
+.navbar {
+    position: absolute;
+    margin: 20px;
+    bottom: 0;
+    right: 0;
+    width: auto;
+}
+
+/* Navbar */
+.topnav {
+    overflow: hidden;
+    background-color: #718c80;
+}
+
+/* Navbar links */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    font-family: Ariel, sans-serif;
+    text-align: center;
+    padding: 40px 45px;
+    text-decoration: none;
+    font-size: 30px;
+    display: flex;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    font-family: Ariel, sans-serif;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Ariel, sans-serif;
+}
+
+.hero-text h1 {
+    text-align:center;
+    font-family: Arial, sans-serif;
+    color: #efefef;
+    font-size: 500% }
+
+.generalGrid {
+    display: flex;
+    background-color: #799d82;
+    padding: 10px;
+    text-align: center;
+    font-family: Ariel, sans-serif;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #B8DEC2;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    font-family: Ariel, sans-serif;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin: 2px auto 0 auto;
+    padding: 5px 0;
+}
+
+.textToSpeech {
+    position: absolute;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.textToSpeechImage {
+    width: 30px;
+    height: 25px;
+}
+.grid-item p{
+    color: black;
+    font-family: Ariel, sans-serif;
+}
+
+#language1{
+    font-size: 30px;
+    width: 200px;
+    font-family: Ariel, sans-serif;
+    color: #f2f2f2;
+    background: #718c80;
+}
+
+.loginForm {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.activities {
+    width: 100%;
+    height: 300px;
+    background: #B8DEC2;
+}
+/*.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color:#718c80 ;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}*/
