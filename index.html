@@ -10,7 +10,7 @@
 <body>
 
 <!-- Hero image/Cover Photo -->
-<div class="hero-image">
+<div class="hero-image-cover">
 <!--
     <div class="hero-text">
         <h1>LinGrow</h1>
@@ -21,11 +21,11 @@
 
     <div class= "navbar">
         <div class="topnav">
-            <a href="communication.html">Communication</a>
+            <a href="communication.html">Login</a>
             <a href="activities.html">Activities</a>
             <a>
                 <div>
-                    <form id="language">
+                    <form>
                         <select id="language1">
                             <option selected>Language</option>
                             <option lang="en" value="english">English</option>
@@ -37,49 +37,114 @@
                     </form>
                 </div>
             </a>
-        </div>
+           </div>
     </div>
 
 </div>
-
-<!--<button>Login</button>
-
- <img src="lab.jpg">
-
-
- Menu for body
-<div class="grid-container">
-    <div class="grid-item">
-        <p>
-        <a href="information.html">Information</a>
-        </p>
-        <button class = "textToSpeech" onclick="readInformation()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
-    </div>
-    <div class="grid-item">
-        <p>
-        <a href="communication.html">Communication</a>
-        </p>
-        <button class = "textToSpeech" onclick="readCommunication()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
-    </div>
-    <div class="grid-item">
-        <p>
-        <a href="activities.html">Activities</a>
-        </p>
-        <button class = "textToSpeech" onclick="readActivities()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
-    </div>
-</div>
--->
 
 <h1> Information </h1>
 
-<!-- 3 resources with expandable grid -->
+<div class="row">
+    <div class="column" onclick="openTab('b1');" style="background:#93c393;">
+        Newcomers in Edmonton <br>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+    </div>
+    <div id="b1" class="containerTab" style="display:none;background:#93c393">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h5 style="text-align: center">Libraries</h5>
+        <p>Libraries are free and accessible to everyone. To access services, you need to get a free library card from the library. With this free library card, you can borrow books, movies and music in 30 languages. You have access to a computer with internet, e-mail, printers and fax machines. You have free access to the Canadian Citizenship Practice Exams. You have access to family language kits in different languages to learn English (CD and book set, a picture dictionary and picture books). You have access to dual-language books (in two languages) for many different languages. You have access to resources for English Language tests. You have access to free online classes for babies and toddlers.
+            <br>
+            <br>
+            <a href="https://www.epl.ca"> Website </a>
+            <br>
+            <a href="https://www.epl.ca/newcomers/">Information for newcomers</a>
+            <br>
+            <a href="https://www.epl.ca/english-language-learners/">Information for English Language Learners</a>
+            <br>
+            <a href="https://www.epl.ca/kids-0-5/">Information for children 0-5 years old</a>
+            <br>
+            Phone number: <b>780-496-7000</b>
+        </p>
+        <br>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+        <p> </p>
+        <br>
+    </div>
+    <div class="column" onclick="openTab('b2');" style="background:#70a6d6;">
+        Edmonton Immigrant Services Association <br>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+    </div>
+    <div id="b2" class="containerTab" style="display:none;background:#70a6d6">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <br>
+        <p>This association gives information and services to new immigrants, refugees, and first generation Canadians. You can have access to services on integration, settlement, adaptation, and education in Edmonton.
+            <br>
+            <a href=" http://www.eisa-edmonton.org/">EISA WEBSITE</a>
+            <br>
+            Phone Number: <b>780-474-8445</b>
+        </p>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+        <p></p>
+        <br>
+    </div>
+    <div class="column" onclick="openTab('b3');" style="background:#cd86a2;">
+        City of Edmonton <br>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+    </div>
+    <div id="b3" class="containerTab" style="display:none;background:#cd86a2">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <br>
+        <p> You have access to this Newcomer guide in 8 languages (English, Amharic, Arabic, Chinese - Simplified, French, Punjabi, Somali, Spanish). This guide has information on:
+            <br>
+            - Finding Information
+            <br>
+            - Settlement Services
+            <br>
+            - Moving around the city
+            <br>
+            - Living
+            <br>
+            - Working
+            <br>
+            - Staying Healthy
+            <br>
+            - Staying Safe
+            <br>
+            - Municipal Government
+            <br>
+            Phone Number: <b>311</b> with interprets in over 150 languages
+            <a href="https://www.edmonton.ca/programs_services/for_new_residents/newcomers-guide.aspx">Website</a>
+        </p>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+        <p></p>
+        <br>
+    </div>
+</div>
 
-<!-- Create footer with icons for social media -->
+<script>
+    function openTab(tabName) {
+        var i, x;
+        x = document.getElementsByClassName("containerTab");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+    }
+</script>
+
+<!-- Create footer with icons for social media
 <div class="footer">
     <a href="https://twitter.com/UofA_Arts">
         <i class="fab fa-twitter"></i>
     </a>
 </div>
+-->
 
 </body>
 </html>

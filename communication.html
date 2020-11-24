@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="mystyle.css">
     <title> LINGROW </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="index.js"></script>
 </head>
 
 <body>
@@ -12,15 +11,28 @@
 <!-- Hero image/Cover Photo -->
 <div class="hero-image">
     <div class="hero-text">
-        <h1>Communication</h1>
+        <h1>Login</h1>
     </div>
     <!-- Navigation bar -->
     <div class= "navbar">
         <div class="topnav">
             <a href="index.html">Home</a>
-            <a href="information.html">Information</a>
-            <a href="communication.html">Communication</a>
+            <a href="communication.html">Login</a>
             <a href="activities.html">Activities</a>
+            <a>
+                <div>
+                    <form>
+                        <select id="language1">
+                            <option selected>Language</option>
+                            <option lang="en" value="english">English</option>
+                            <option lang="fr" value="francais">Francais</option>
+                            <option lang="de" value="german">German</option>
+                            <option lang="it" value="italiano">Italiano</option>
+                            <option lang="es" value="español">Espanol</option>
+                        </select>
+                    </form>
+                </div>
+            </a>
         </div>
     </div>
 </div>
@@ -49,29 +61,111 @@
 
 <p id="user"></p>
 
--->
 <div class="grid-container">
     <div class="grid-item">
         <p>
             <a href="teacher.html">I'm a Teacher!</a>
         </p>
         <button class = "textToSpeech" onclick="readInformation()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+        <p> </p>
     </div>
     <div class="grid-item">
         <p>
             <a href="parent.html">I'm a Parent!</a>
         </p>
         <button class = "textToSpeech" onclick="readCommunication()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <p> </p>
     </div>
     <div class="grid-item">
         <p>
             <a href="researcher.html">I'm a Researcher!</a>
         </p>
         <button class = "textToSpeech" onclick="readActivities()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <p> </p>
+    </div>
+</div>
+-->
+
+<div class="row">
+    <div class="column" onclick="openTab('b1');" style="background:#93c393;">
+        I'm a Teacher!
+        <br>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+    </div>
+    <div id="b1" class="containerTab" style="display:none;background:#93c393">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <form>
+            <br>
+            <label>Username: </label>
+            <input type="text" id="teacherusername">
+
+            <br>
+            <label>Password: </label>
+            <input type="password" id="teacherpassword"> <br>
+        </form>
+
+        <button onclick="teacherPortal()">Login</button>
+
+        <br>
+    </div>
+
+    <div class="column" onclick="openTab('b2');" style="background:#70a6d6;">
+        I'm a Parent!
+        <br>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+    </div>
+    <div id="b2" class="containerTab" style="display:none;background:#70a6d6">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <form>
+            <br>
+            <label>Username: </label>
+            <input type="text" id="parentusername">
+
+            <br>
+            <label>Password: </label>
+            <input type="password" id="parentpassword"> <br>
+
+        </form>
+        <button onclick="parentPortal()">Login</button>
+        <br>
+    </div>
+    <div class="column" onclick="openTab('b3');" style="background:#cd86a2;">
+        I'm a Researcher!
+        <br>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+    </div>
+    <div id="b3" class="containerTab" style="display:none;background:#cd86a2">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <form>
+            <br>
+            <label>Username: </label>
+            <input type="text" id="researcherusername">
+
+            <br>
+            <label>Password: </label>
+            <input type="password" id="researcherpassword"> <br>
+
+        </form>
+        <button onclick="researchPortal()">Login</button>
+        <br>
     </div>
 </div>
 
-
+<script>
+    function openTab(tabName) {
+        var i, x;
+        x = document.getElementsByClassName("containerTab");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+    }
+</script>
+<script src="index.js"></script>
 
 </body>
 </html>

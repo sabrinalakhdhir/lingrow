@@ -25,3 +25,15 @@ function openPortal() {
     }
     document.getElementById("user").innerHTML = userType;
 }
+
+function teacherPortal() {
+    alert("Opening Teacher Portal");
+}
+
+function parentPortal() {
+    alert("Opening Parent Portal");
+}
+
+function researchPortal() {
+    alert("Opening Researcher Portal");
+}
