@@ -5,7 +5,9 @@ h1 {
     text-align:center;
     font-family: Ariel, sans-serif;
     color: #718c80;
-    font-size: 500% }
+    font-size: 500%
+}
+
 p {
     color: #ffffff;
     text-align: center;
@@ -18,7 +20,7 @@ form {
     font-size: 30px;
 }
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("lab.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("lab.JPG");
     width: 100%;
     height: 500px;
     background-position: center;
@@ -43,16 +45,18 @@ form {
     bottom: 0;
     right: 0;
     width: auto;
+    overflow: hidden;
 }
 
 /* Navbar */
-.topnav {
+#topnav {
     overflow: hidden;
     background-color: #718c80;
+    width: 100%;
 }
 
 /* Navbar links */
-.topnav a {
+#topnav a {
     float: left;
     color: #f2f2f2;
     font-family: Ariel, sans-serif;
@@ -60,13 +64,19 @@ form {
     padding: 30px 35px;
     text-decoration: none;
     font-size: 30px;
-    display: flex;
+    display: block;
 }
 
-.topnav a:hover {
+
+#topnav a:hover {
     background-color: #ddd;
     color: black;
     font-family: Ariel, sans-serif;
+}
+
+#topnav a.active {
+    background-color: #B8DEC2;
+    color: black;
 }
 
 .sticky {
@@ -77,6 +87,7 @@ form {
 
 .sticky + .content {
     padding-top: 60px;
+    width: 100%;
 }
 
 .hero-text {
@@ -131,9 +142,9 @@ form {
 }
 
 .textToSpeech {
-    position: absolute;
+    /*position: absolute;
     margin-top: 10px;
-    margin-bottom: 2px;
+    margin-bottom: 2px;*/
     margin-right: auto;
     margin-left: auto;
 }
@@ -142,6 +153,19 @@ form {
     width: 30px;
     height: 25px;
 }
+
+.recordImage {
+    width: 60px;
+    height: 60px;
+}
+
+.record {
+    margin:0 auto;
+    width: 100%;
+    background-color: Transparent;
+    border: none;
+}
+
 .grid-item p{
     color: black;
     font-family: Ariel, sans-serif;
@@ -207,7 +231,9 @@ form {
 .column {
     float: left;
     width: 100%;
-    padding: 50px;
+    /*padding: 50px;*/
+    padding-top: 50px;
+    padding-bottom: 50px;
     position: center;
     text-align: center;
     font-size: 25px;
@@ -217,7 +243,7 @@ form {
 }
 
 .containerTab {
-    padding: 20px;
+    padding: 40px;
     color: white;
     font-family: Ariel, sans-serif;
 }
@@ -236,3 +262,31 @@ form {
     font-size: 35px;
     cursor: pointer;
 }
+
+.button {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.row {
+    padding: 16px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {background-color: #4c1b2e;}

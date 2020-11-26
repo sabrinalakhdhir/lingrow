@@ -13,10 +13,9 @@
 <div class="hero-image">
     <div class="hero-text">
         <h1>Information</h1>
-            </div>
+    </div>
     <!-- Navigation bar -->
-    <div class= "navbar">
-        <div class="topnav">
+        <div id="topnav">
             <a href="index.html">Home</a>
             <a href="communication.html">Login</a>
             <a href="activities.html">Activities</a>
@@ -35,7 +34,6 @@
                 </div>
             </a>
         </div>
-    </div>
 </div>
 
 <div class="generalGrid">
@@ -103,7 +101,20 @@
         <br>
     </div>
 </div>
+<script>
+    window.onscroll = function() {myFunction()};
 
+    var navbar = document.getElementById("topnav");
+    var sticky = navbar.offsetTop;
 
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+        }
+        else {
+        navbar.classList.remove("sticky");
+        }
+    }
+</script>
 </body>
 </html>

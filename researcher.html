@@ -10,10 +10,9 @@
 <body>
 <div class="hero-image">
     <!-- Navigation bar -->
-    <div class= "navbar">
-        <div class="topnav">
+        <div id="topnav">
             <a href="index.html">Home</a>
-            <a href="communication.html">Login</a>
+            <a href="communication.html" class="active">Login</a>
             <a href="activities.html">Activities</a>
             <a>
                 <div>
@@ -30,30 +29,22 @@
                 </div>
             </a>
         </div>
-    </div>
+
 </div>
 
-<div class="loginForm">
-    <form>
-        <select id="userType">
-            <option value="Parent" >Parent</option>
-            <option value="Teacher">Teacher</option>
-            <option value="Researcher" selected>Researcher</option>
-        </select>
+<script>
+    window.onscroll = function() {myFunction()};
 
-        <br>
-        <label>Username: </label>
-        <input type="text" id="username">
+    var navbar = document.getElementById("topnav");
+    var sticky = navbar.offsetTop;
 
-        <br>
-        <label>Password: </label>
-        <input type="password" id="password"> <br>
-
-        <input type="button" value="Login" onclick="openPortal()">
-    </form>
-</div>
-
-<p id="user"></p>
-
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
 </body>
 </html>

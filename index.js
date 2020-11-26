@@ -1,3 +1,21 @@
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("topnav");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+
 function readInformation() {
     alert("Reading Information");
 }
@@ -10,30 +28,6 @@ function readActivities() {
     alert("Reading Activities");
 }
 
-function openPortal() {
-    // needs to bring in a value to say which portal to open
-    let userIndex = document.getElementById("userType").selectedIndex;
-    let userType;
-    if (userIndex === 0) {
-        userType = "Parent";
-    }
-    else if (userIndex === 1) {
-        userType = "Teacher";
-    }
-    else {
-        userType = "Researcher";
-    }
-    document.getElementById("user").innerHTML = userType;
-}
-
-function teacherPortal() {
-    alert("Opening Teacher Portal");
-}
-
-function parentPortal() {
-    alert("Opening Parent Portal");
-}
-
-function researchPortal() {
-    alert("Opening Researcher Portal");
+function openPortal(userType) {
+    alert("Opening " + userType + " portal");
 }

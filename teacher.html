@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="mystyle.css">
     <script src="index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
     <title>Teacher Portal</title>
 </head>
 <body>
 <div class="hero-image">
     <!-- Navigation bar -->
-    <div class= "navbar">
-        <div class="topnav">
+        <div id="topnav">
             <a href="index.html">Home</a>
-            <a href="communication.html">Login</a>
+            <a href="communication.html" class="active">Login</a>
             <a href="activities.html">Activities</a>
             <a>
                 <div>
@@ -30,30 +30,127 @@
                 </div>
             </a>
         </div>
+</div>
+
+<h1>Hello, Mr. Ahmed!</h1>
+<div class="row">
+    <div class="column" onclick="openTab('b1');" style="background:#93c393;">
+        <!-- Add image for speaker -->
+        <img src="mic.png" style="width: 5%">
+        <br>
+    </div>
+
+    <div id="b1" class="containerTab" style="display:none;background:#93c393">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <p>Press record to begin recording. </p>
+        <button class ="record"><img class="recordImage" src="record.png"></button>
+        <br>
+        <p> </p>
+        <br>
+        <br>
+    </div>
+
+    <div class="column" onclick="openTab('b2');" style="background:#70a6d6;">
+        <!-- Add image for video -->
+        <img src="video.png" style="width: 7%">
+        <br>
+    </div>
+    <div id="b2" class="containerTab" style="display:none;background:#70a6d6;m">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <p>Press record to begin recording. </p>
+        <button class ="record" onclick="webcam.start()"><img class="recordImage" src="record.png"></button>
+        <video class="record" id="webcam" autoplay playsinline width="640" height="480" style="position: center"></video>
+        <canvas id="canvas" class="d-none"></canvas>
+        <audio id="snapSound" src="audio/snap.wav" preload = "auto"></audio>
+        <br>
+        <p> </p>
+        <br>
+        <br>
+    </div>
+    <div class="column" onclick="openTab('b3');" style="background:#cd86a2;">
+        <!-- Add image for mail-->
+        <img src="envelope.png" style="width: 7%">
+        <br>
+        <p> </p>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+    </div>
+    <div id="b3" class="containerTab" style="display:none;background:#cd86a2">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <br>
+        <table>
+            <tr>
+                <th style="color: #b1b1b1">Messages</th>
+            </tr>
+            <tr>
+                <td>
+                    <h5 style="color: #b1b1b1"> From: Mrs. Fisher </h5>
+                    <h3> Subject: Re: Andy's Health </h3>
+                    Hi Ahmed,<br><br>
+
+                    Vielen Dank für Ihre Besorgnis. Andy hat diese Woche nicht gut geschlafen. Die Nachbarn haben laute Musik gespielt. Er wird das nächste Mal seine Hausaufgaben vervollständigen.
+                    <br><br>
+
+                    </p>
+                    <br>
+                    <button class = "textToSpeech" style="left: 50%" onclick="playFisherMessage()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+                    <br>
+                </td>
+            </tr>
+             <tr>
+                 <td>
+                     <button style="float:right;">Reply</button>
+                 </td>
+             </tr>
+
+        </table>
+        <p> </p>
     </div>
 </div>
 
-<div class="loginForm">
-    <form>
-        <select id="userType">
-            <option value="Parent">Parent</option>
-            <option value="Teacher" selected>Teacher</option>
-            <option value="Researcher">Researcher</option>
-        </select>
+<script>
+    const webcamElement = document.getElementById('webcam');
+    const canvasElement = document.getElementById('canvas');
+    const snapSoundElement = document.getElementById('snapSound');
+    const webcam = new Webcam(webcamElement, 'user', canvasElement, snapSoundElement);
 
-        <br>
-        <label>Username: </label>
-        <input type="text" id="username">
+    webcam.start()
+        .then(result =>{
+            console.log("webcam started");
+        })
+        .catch(err => {
+            console.log(err);
+        });
 
-        <br>
-        <label>Password: </label>
-        <input type="password" id="password"> <br>
+    let picture = webcam.snap();
+    document.querySelector('#download-photo').href = picture;
 
-        <input type="button" value="Login" onclick="openPortal()">
-    </form>
-</div>
 
-<p id="user"></p>
 
+    function playFisherMessage() {
+        var audio = new Audio('Ahmed.m4a');
+        audio.play();
+    }
+    function openTab(tabName) {
+        var i, x;
+        x = document.getElementsByClassName("containerTab");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+    }
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("topnav");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
 </body>
 </html>

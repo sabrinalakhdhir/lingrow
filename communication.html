@@ -14,10 +14,9 @@
         <h1>Login</h1>
     </div>
     <!-- Navigation bar -->
-    <div class= "navbar">
-        <div class="topnav">
+        <div id="topnav">
             <a href="index.html">Home</a>
-            <a href="communication.html">Login</a>
+            <a href="communication.html" class="active">Login</a>
             <a href="activities.html">Activities</a>
             <a>
                 <div>
@@ -34,7 +33,7 @@
                 </div>
             </a>
         </div>
-    </div>
+
 </div>
 
 <!--
@@ -91,6 +90,7 @@
     <div class="column" onclick="openTab('b1');" style="background:#93c393;">
         I'm a Teacher!
         <br>
+        <p> </p>
         <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
         <br>
     </div>
@@ -106,7 +106,8 @@
             <input type="password" id="teacherpassword"> <br>
         </form>
 
-        <button onclick="teacherPortal()">Login</button>
+        <a href="teacher.html"><button type="button">Login</button></a>
+        <!--<button id="teacher" onclick="openPortal(this.id)">Login</button>-->
 
         <br>
     </div>
@@ -114,6 +115,7 @@
     <div class="column" onclick="openTab('b2');" style="background:#70a6d6;">
         I'm a Parent!
         <br>
+        <p> </p>
         <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
         <br>
     </div>
@@ -129,12 +131,14 @@
             <input type="password" id="parentpassword"> <br>
 
         </form>
-        <button onclick="parentPortal()">Login</button>
+        <a href="parent.html"><button type="button">Login</button></a>
+        <!--<button id="parent" onclick="openPortal(this.id)">Login</button>-->
         <br>
     </div>
     <div class="column" onclick="openTab('b3');" style="background:#cd86a2;">
         I'm a Researcher!
         <br>
+        <p> </p>
         <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
         <br>
     </div>
@@ -150,7 +154,8 @@
             <input type="password" id="researcherpassword"> <br>
 
         </form>
-        <button onclick="researchPortal()">Login</button>
+        <a href="researcher.html"><button type="button">Login</button></a>
+        <!--<button id="researcher" onclick="openPortal(input.id)">Login</button>-->
         <br>
     </div>
 </div>
@@ -163,6 +168,20 @@
             x[i].style.display = "none";
         }
         document.getElementById(tabName).style.display = "block";
+    }
+
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("topnav");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        }
+        else {
+            navbar.classList.remove("sticky");
+        }
     }
 </script>
 <script src="index.js"></script>
