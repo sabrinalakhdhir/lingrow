@@ -24,6 +24,7 @@
                             <option lang="de" value="german">German</option>
                             <option lang="it" value="italiano">Italiano</option>
                             <option lang="es" value="español">Espanol</option>
+                            <option lang="hi" value="hindi">Hindi</option>
                         </select>
                     </form>
                 </div>
@@ -53,7 +54,7 @@
             <img src="video.png" style="width: 7%">
             <br>
         </div>
-        <div id="b2" class="containerTab" style="display:none;background:#70a6d6;m">
+        <div id="b2" class="containerTab" style="display:none;background:#70a6d6;">
             <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
             <p>Press record to begin recording. </p>
             <button class ="record" onclick="webcam.start()"><img class="recordImage" src="record.png"></button>
@@ -97,7 +98,11 @@
                         <br>
                     </td>
                 </tr>
-
+                <tr>
+                    <td>
+                        <button style="float:right;">Reply</button>
+                    </td>
+                </tr>
             </table>
             <p> </p>
         </div>
