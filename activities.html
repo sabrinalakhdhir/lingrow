@@ -10,7 +10,7 @@
 <body>
 
 <!-- Hero image/Cover Photo -->
-<div class="hero-image">
+<div class="hero-image-activities">
     <div class="hero-text">
         <h1>Activities</h1>
     </div>
@@ -29,20 +29,20 @@
                             <option lang="de" value="german">German</option>
                             <option lang="it" value="italiano">Italiano</option>
                             <option lang="es" value="español">Espanol</option>
+                            <option lang="hi" value="hindi">Hindi</option>
                         </select>
                     </form>
                 </div>
             </a>
         </div>
 </div>
-
+<!--
 <div class="generalGrid">
     <br>
 
     <a style="font-size: 30px;text-align: center" href="https://bilingualacquisition.ca/covid-19-multilingual-families-talking-and-playing/">General Lab Link</a>
 </div>
 
-<!-- 2 & 2, not 6 activities -->
 <div class="grid-container-activities">
     <div class="grid-item">
         <a href="https://docs.google.com/document/d/1d1hpqs7t5Ku5ks-XRVsjFmBqzDkEYzZTkyLecS7hHoY/edit">Guitar Activity</a>
@@ -78,6 +78,60 @@
         <img src="Clothes.png" style = "width:500px; height:600px">
         <br>
         <button class = "textToSpeech"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+    </div>
+    -->
+<div class="row">
+    <div class="column" onclick="openTab('b1');" style="background:#93c393;">
+        Guitar Activity <br>
+        <p> </p>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+    </div>
+    <div id="b1" class="containerTab" style="display:none;background:#93c393">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <h5 style="text-align: center"></h5>
+        <p> Click on the picture to build your own Guitar with a few elastic bands!
+        </p>
+        <a href="https://docs.google.com/document/d/1d1hpqs7t5Ku5ks-XRVsjFmBqzDkEYzZTkyLecS7hHoY/edit"><img id= "Guitar" src="guitar picture.png" class=center style="width:300px; height:400px"></a>a
+        <br>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+        <p> </p>
+        <br>
+    </div>
+    <div class="column" onclick="openTab('b2');" style="background:#70a6d6;">
+       Snack TIme <br>
+        <p> </p>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+    </div>
+    <div id="b2" class="containerTab" style="display:none;background:#70a6d6">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <br>
+        <p> Click on the picture to work together and pick the snack you want!
+        </p>
+        <a href="https://docs.google.com/document/d/1jaPskNSojWj5x8cwakgspPP-XgUMlvh311CzmO7XvLA/edit"><img id="apple" src="apple.png" style = "width:500px; height:600px"></a>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+        <p></p>
+        <br>
+    </div>
+    <div class="column" onclick="openTab('b3');" style="background:#cd86a2;">
+        Dress up!<br>
+        <p> </p>
+        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+    </div>
+    <div id="b3" class="containerTab" style="display:none;background:#cd86a2">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <br>
+        <p> Click on the picture to have fun with wearing different clothes!
+        </p>
+        <a href="https://docs.google.com/document/d/1AgBNdNnX8UkAeGfw_-2t1JvjYfbb7rfMwt28z1TNDc0/edit"><img id="clothes" src="Clothes.png" style = "width:500px; height:600px"></a>
+        <button class = "textToSpeech" style="align-items: center"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <br>
+        <p></p>
         <br>
     </div>
 </div>
