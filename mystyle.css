@@ -1,9 +1,11 @@
+* {
+    font-family: Lato, sans-serif;
+}
 body {
     background-color: lavenderblush
 }
 h1 {
     text-align:center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
     color: #718c80;
     font-size: 500%
 }
@@ -11,12 +13,10 @@ h1 {
 p {
     color: #ffffff;
     text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 form {
     margin: 0 auto;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 30px;
 }
 .hero-image {
@@ -38,7 +38,7 @@ form {
     position: relative;
 }
 .hero-image-activities{
-    background-image: rgba(0, 0, 0, 0.5), url("Child Arranging blocks 1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("Child Arranging blocks 1.jpg");
     width: 100%;
     height: 500px;
     background-position: center;
@@ -47,7 +47,7 @@ form {
     position: relative;
 }
 .hero-image-login{
-    background-image: rgba(0, 0, 0, 0.5), url("Child Reading.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("Child Reading.jpg");
     width: 100%;
     height: 500px;
     background-position: center;
@@ -70,13 +70,14 @@ form {
     overflow: hidden;
     background-color: #718c80;
     width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 /* Navbar links */
 #topnav a {
     float: left;
     color: #f2f2f2;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
     padding: 20px 25px;
     text-decoration: none;
@@ -88,7 +89,6 @@ form {
 #topnav a:hover {
     background-color: #ddd;
     color: black;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #topnav a.active {
@@ -113,21 +113,19 @@ form {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .hero-text h1 {
     text-align:center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #5a2351;
-    font-size: 500% }
+    color: #B8DEC2;
+    font-size: 500%;
+}
 
 .generalGrid {
     display: flex;
     background-color: #799d82;
     padding: 10px;
     text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .grid-container {
     display: grid;
@@ -147,7 +145,6 @@ form {
     padding: 20px;
     font-size: 30px;
     text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .footer {
@@ -159,9 +156,6 @@ form {
 }
 
 .textToSpeech {
-    /*position: absolute;
-    margin-top: 10px;
-    margin-bottom: 2px;*/
     margin-right: auto;
     margin-left: auto;
 }
@@ -185,13 +179,11 @@ form {
 
 .grid-item p{
     color: black;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
 }
 
 #language1{
     font-size: 20px;
     width: 200px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #f2f2f2;
     background: #718c80;
 }
@@ -201,7 +193,6 @@ form {
     width: 50%;
     padding: 10px;
     font-size: 30px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .activities {
@@ -256,13 +247,11 @@ form {
     font-size: 25px;
     cursor: pointer;
     color: white;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .containerTab {
     padding: 40px;
     color: white;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* Clear floats after the columns */
