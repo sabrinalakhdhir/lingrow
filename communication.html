@@ -92,7 +92,7 @@
         I'm a Teacher!
         <br>
         <p> </p>
-        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <button class = "textToSpeech" style="left: 50%" onclick="playteacher()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
         <br>
     </div>
     <div id="b1" class="containerTab" style="display:none;background:#93c393">
@@ -117,7 +117,7 @@
         I'm a Parent!
         <br>
         <p> </p>
-        <button class = "textToSpeech" style="left: 50%"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
+        <button class = "textToSpeech" style="left: 50%" onclick="playparent()"> <img class="textToSpeechImage" src = "textToSpeechImage.png"></button>
         <br>
     </div>
     <div id="b2" class="containerTab" style="display:none;background:#70a6d6">
@@ -183,6 +183,14 @@
         else {
             navbar.classList.remove("sticky");
         }
+    }
+    function playparent() {
+        var audio = new Audio('Im a parent.m4a');
+        audio.play();
+    }
+    function playteacher() {
+        var audio = new Audio('Im a teacher.m4a');
+        audio.play();
     }
 </script>
 <script src="index.js"></script>
